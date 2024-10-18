@@ -1,0 +1,10 @@
+C:\Users\Mahyar\Desktop\calculate distance\calcualate-distance\calcualate-distance\bin\Debug\calcualate-distance.exe.config
+C:\Users\Mahyar\Desktop\calculate distance\calcualate-distance\calcualate-distance\bin\Debug\calcualate-distance.exe
+C:\Users\Mahyar\Desktop\calculate distance\calcualate-distance\calcualate-distance\bin\Debug\calcualate-distance.pdb
+C:\Users\Mahyar\Desktop\calculate distance\calcualate-distance\calcualate-distance\obj\Debug\calcualate-distance.csproj.AssemblyReference.cache
+C:\Users\Mahyar\Desktop\calculate distance\calcualate-distance\calcualate-distance\obj\Debug\calcualate_distance.Form1.resources
+C:\Users\Mahyar\Desktop\calculate distance\calcualate-distance\calcualate-distance\obj\Debug\calcualate_distance.Properties.Resources.resources
+C:\Users\Mahyar\Desktop\calculate distance\calcualate-distance\calcualate-distance\obj\Debug\calcualate-distance.csproj.GenerateResource.cache
+C:\Users\Mahyar\Desktop\calculate distance\calcualate-distance\calcualate-distance\obj\Debug\calcualate-distance.csproj.CoreCompileInputs.cache
+C:\Users\Mahyar\Desktop\calculate distance\calcualate-distance\calcualate-distance\obj\Debug\calcualate-distance.exe
+C:\Users\Mahyar\Desktop\calculate distance\calcualate-distance\calcualate-distance\obj\Debug\calcualate-distance.pdb

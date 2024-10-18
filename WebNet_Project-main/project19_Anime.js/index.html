@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anime.js Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  </head>
+  <body>
+    
+    <div id="targetElement">Hello, Anime.js!</div>
+
+    <script>
+      // Select the target element
+  const targetElement = document.getElementById('targetElement');
+
+// Create the animation
+anime({
+  targets: targetElement,
+  translateX: '500px',
+  duration: 1000, // Animation duration in milliseconds
+  easing: 'easeInOutQuad', // Easing function
+  loop: true, // Repeat the animation
+});
+    </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anime.js Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+ 

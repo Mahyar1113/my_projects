@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTTP Cat Images</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // Wait for the document to be ready
+        $(document).ready(function() {
+            // When the button is clicked
+            $('#btnSubmit').click(function() {
+                // Get the value entered in the input field
+                var statusCode = $('#statusCode').val();
+
+                // Construct the URL for the image based on the entered status code
+                var imageUrl = 'https://http.cat/' + statusCode + '.jpg';
+
+                // Display the image
+                $('#catImage').attr('src', imageUrl)
+                    .on('error', function() {
+                        // If the image fails to load, display an error message image
+                        $(this).attr('src', 'error.jpg');
+                    });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>HTTP Cat Images</h1>
+    <label for="statusCode">Enter Response Code:</label>
+    <input type="text" id="statusCode">
+    <button id="btnSubmit">Get Image</button>
+    <br>
+    <img id="catImage" src="" alt="HTTP Cat Image">
+</body>
+</html>

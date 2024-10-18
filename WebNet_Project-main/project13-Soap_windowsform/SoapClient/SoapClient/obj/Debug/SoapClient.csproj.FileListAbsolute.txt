@@ -1,0 +1,10 @@
+C:\Users\Mahyar\Desktop\pr13\SoapClient\SoapClient\bin\Debug\SoapClient.exe.config
+C:\Users\Mahyar\Desktop\pr13\SoapClient\SoapClient\bin\Debug\SoapClient.exe
+C:\Users\Mahyar\Desktop\pr13\SoapClient\SoapClient\bin\Debug\SoapClient.pdb
+C:\Users\Mahyar\Desktop\pr13\SoapClient\SoapClient\obj\Debug\SoapClient.csproj.AssemblyReference.cache
+C:\Users\Mahyar\Desktop\pr13\SoapClient\SoapClient\obj\Debug\SoapClient.Form1.resources
+C:\Users\Mahyar\Desktop\pr13\SoapClient\SoapClient\obj\Debug\SoapClient.Properties.Resources.resources
+C:\Users\Mahyar\Desktop\pr13\SoapClient\SoapClient\obj\Debug\SoapClient.csproj.GenerateResource.cache
+C:\Users\Mahyar\Desktop\pr13\SoapClient\SoapClient\obj\Debug\SoapClient.csproj.CoreCompileInputs.cache
+C:\Users\Mahyar\Desktop\pr13\SoapClient\SoapClient\obj\Debug\SoapClient.exe
+C:\Users\Mahyar\Desktop\pr13\SoapClient\SoapClient\obj\Debug\SoapClient.pdb

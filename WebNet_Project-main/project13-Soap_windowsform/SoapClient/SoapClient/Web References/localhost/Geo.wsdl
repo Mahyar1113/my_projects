@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetPointByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPointByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPointByIDResult" type="tns:GeoPoint" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GeoPoint">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="X" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Y" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDistance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDistanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDistanceResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClosestPosition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="importX" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="importY" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClosestPositionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClosestPositionResult" type="tns:GeoPoint" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPointByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPointByID" />
+  </wsdl:message>
+  <wsdl:message name="GetPointByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPointByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDistanceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDistance" />
+  </wsdl:message>
+  <wsdl:message name="GetDistanceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDistanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClosestPositionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClosestPosition" />
+  </wsdl:message>
+  <wsdl:message name="GetClosestPositionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClosestPositionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GeoSoap">
+    <wsdl:operation name="GetPointByID">
+      <wsdl:input message="tns:GetPointByIDSoapIn" />
+      <wsdl:output message="tns:GetPointByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistance">
+      <wsdl:input message="tns:GetDistanceSoapIn" />
+      <wsdl:output message="tns:GetDistanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClosestPosition">
+      <wsdl:input message="tns:GetClosestPositionSoapIn" />
+      <wsdl:output message="tns:GetClosestPositionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GeoSoap" type="tns:GeoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPointByID">
+      <soap:operation soapAction="http://tempuri.org/GetPointByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistance">
+      <soap:operation soapAction="http://tempuri.org/GetDistance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClosestPosition">
+      <soap:operation soapAction="http://tempuri.org/GetClosestPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GeoSoap12" type="tns:GeoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPointByID">
+      <soap12:operation soapAction="http://tempuri.org/GetPointByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistance">
+      <soap12:operation soapAction="http://tempuri.org/GetDistance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClosestPosition">
+      <soap12:operation soapAction="http://tempuri.org/GetClosestPosition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Geo">
+    <wsdl:port name="GeoSoap" binding="tns:GeoSoap">
+      <soap:address location="http://localhost:52764/Geo.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GeoSoap12" binding="tns:GeoSoap12">
+      <soap12:address location="http://localhost:52764/Geo.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

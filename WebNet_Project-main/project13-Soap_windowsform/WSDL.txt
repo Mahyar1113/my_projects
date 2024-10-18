@@ -1,0 +1,1 @@
+WSDL URL:http://localhost:52764/Geo.asmx?WSDL
